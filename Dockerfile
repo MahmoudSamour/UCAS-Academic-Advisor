@@ -1,13 +1,5 @@
-FROM python:3.8-slim
-
-RUN python -m pip install rasa
-
+FROM rasa/rasa:3.1.2-full
 WORKDIR /app
-
-RUN rasa train nlu
-
-USER 1001
-
-ENTRYPOINT ["rasa"]
-
-CMD ["run","--enable-api","--port","--8080"]
+COPY . /app
+EXPOSE 5005
+CMD ["run", "--enable-api", "--cors", "*", "--debug", "--endpoints", "endpoints.yml", "--credentials", "credentials.yml", "--model", "models"]
