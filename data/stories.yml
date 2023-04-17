@@ -1,0 +1,78 @@
+version: "3.1"
+
+stories:
+
+- story: interactive story name
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: request_details
+  - action: utter_initiate_data_collection
+  - action: user_details_form
+  - active_loop: user_details_form
+  - slot_was_set:
+    - requested_slot: first_name
+  - slot_was_set:
+    - first_name: Mahmoud
+  - slot_was_set:
+    - requested_slot: last_name
+  - slot_was_set:
+    - last_name: Mahmoud-Sammour
+  - slot_was_set:
+      - requested_slot: state
+  - slot_was_set:
+      - first_name: غزة
+  - action: utter_slots_names
+  - slot_was_set:
+      - requested_slot: question_1
+  - slot_was_set:
+      - question_1: E
+  - slot_was_set:
+      - requested_slot: question_2
+  - slot_was_set:
+      - question_2: E
+  - slot_was_set:
+      - requested_slot: question_3
+  - slot_was_set:
+      - question_3: E
+  - slot_was_set:
+      - requested_slot: question_4
+  - slot_was_set:
+      - question_4: E
+  - slot_was_set:
+      - requested_slot: question_5
+  - slot_was_set:
+      - question_5: E
+  - slot_was_set:
+      - requested_slot: question_6
+  - slot_was_set:
+      - question_6: E
+  - slot_was_set:
+      - requested_slot: question_7
+  - slot_was_set:
+      - question_7: E
+  - slot_was_set:
+      - requested_slot: question_8
+  - slot_was_set:
+      - question_8: E
+  - slot_was_set:
+      - requested_slot: question_9
+  - slot_was_set:
+      - question_9: E
+  - slot_was_set:
+      - requested_slot: question_10
+  - slot_was_set:
+      - question_10: E
+  - slot_was_set:
+      - requested_slot: question_11
+  - slot_was_set:
+      - question_11: E
+  - slot_was_set:
+      - requested_slot: question_12
+  - slot_was_set:
+      - question_12: E
+    
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  -

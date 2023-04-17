@@ -1,0 +1,317 @@
+version: "3.1"
+
+intents:
+  - greet
+  - deny
+  - request_details
+  - request_results
+  - goodbye
+  - affirm
+  - bot_challenge
+
+responses:
+  utter_greet:
+  - text: "مرحبا أنا المستشار الأكاديمي الافتراضي من أكت كيف ممكن اساعدك"
+
+  utter_goodbye:
+  - text: "مع السلامة"
+  - text: "الى اللقاء"
+
+  utter_iamabot:
+  - text: "انا متحدث الي ذكي و اسمي فهيم مطور من قبل أكت هب و مبرمج باستخدام (RASA). و لقد تمت برمجتي على مساعتك في ايجاد افضل جامعة و تخصص لتلتحق بهم "
+  - text: "نعم انا متحدث الي ذكي"
+  - text: "صحيح انا لست انسان بل متحدث الي"
+
+  
+  utter_initiate_data_collection:
+  - text: حسننا حتى اتمكن من مساعدتك سوف اسألك مجموعة من الاسئلة
+  - text: ممتاز, لقد تمت برمجتي حتى اتمكن من مساعدتك في ايجاد افضل تخصص يناسب شخصيتك, وحتى اتمكن من ذلك سأسئلك مجموعة من الأسئلة
+
+  utter_ask_first_name:
+  - text: ما هو اسمك الأول
+  - text: شو اسمك الأول 
+  - text: اكتبلي اسمك الأول 
+
+  utter_ask_last_name:
+  - text: حسنا  {first_name} ما هو اسم عائلتك?
+  - text: عاشت الاسامي {first_name} ما هو اسم عائلتك?
+
+  utter_ask_state:
+    - text: "وين ساكن"
+      buttons:
+        - title: "محافظات الشمال"
+          payload: "محافظات الشمال"
+        - title: "الوسطى"
+          payload: "الوسطى"
+        - title: "محافظات الجنوب"
+          payload: "محافظات الجنوب"
+        - title: "غزة"
+          payload: "غزة"
+
+
+  utter_ask_question_1:
+    - text: "لما تكون في حفلة بتحب"
+      buttons:
+        - title: "تختلط بالناس و مع أشخاص أول مرة تشوفهم"
+          payload: "E"
+        - title: "تختلط بالناس الي بتعرفهم بس او عدد قليل من البشر"
+          payload: "I"
+
+  utter_ask_question_2:
+    - text: "في محيطك الاجتماعي صحابك أو عيلتك بتكون عادة"
+      buttons:
+        - title: "عارف كل اشي اول بأول"
+          payload: "E"
+        - title: "بتسمع الاخبار بعد فترة من حصولها"
+          payload: "I"
+
+  utter_ask_question_3:
+    - text: "لما الاستاذ ينادي مين حابب يجاوب وانت عارف الجواب"
+      buttons:
+        - title: "بترفع ايدك تجاوب اول واحد"
+          payload: "E"
+        - title: "بتحبش تجاوب الا اذا الاستاذ ناداك باسمك"
+          payload: "I"
+
+  utter_ask_question_4:
+    - text: "هل انت شخص "
+      buttons:
+        - title: "تفكر بشكل واقعي اكثر "
+          payload: "S"
+        - title: "تخمن و تفترض الامور"
+          payload: "N"
+
+  utter_ask_question_5:
+    - text: "الأشخاص الطموحين أو الحالمون"
+      buttons:
+        - title: "مزعجين شوي"
+          payload: "S"
+        - title: "شخصيتهم رائعة"
+          payload: "N"
+
+  utter_ask_question_6:
+    - text: "أنت بطبعك شخص "
+      buttons:
+        - title: "بتقيم الناس حسب كفائتها و الفايدة المتوقعة"
+          payload: "S"
+        - title: "بتحط نفسك في مكان الاخرين و بتتفهم موقفهم"
+          payload: "N"
+
+  utter_ask_question_7:
+    - text: "لما تتعرف على شخص جديد بتكون عادة"
+      buttons:
+        - title: "بتحكي بالموضوع المهم مباشرة"
+          payload: "T"
+        - title: "بتحكي عن حالك و بتسأله عن اموره الشخصية"
+          payload: "F"
+
+  utter_ask_question_8:
+    - text: "شو بتعتبره غلط اكتر "
+      buttons:
+        - title: "الظلم و عدم تطبيق النظام"
+          payload: "T"
+        - title: "العفو و المغفرة للمخطأ"
+          payload: "F"
+
+  utter_ask_question_9:
+    - text: "اي من الصفات التالية تعتبر مديح و صفة حسنة"
+      buttons:
+        - title: "هذا انسان منطقي "
+          payload: "T"
+        - title: "هدا انسان عاطفي"
+          payload: "F"
+
+  utter_ask_question_10:
+    - text: "أي مهام بتحب اكتر وانت بتدرس أو بتشتغل"
+      buttons:
+        - title: " المهام التي لها وقت تسليم محدد"
+          payload: "J"
+        - title: "المهام التي ليس لها وقت تسليم و بتشتغل براحتك"
+          payload: "P"
+
+  utter_ask_question_11:
+    - text: "لما تحضر فلم ايش بضايقك اكتر"
+      buttons:
+        - title: "تقوم قبل ما يخلص الفلم"
+          payload: "J"
+        - title: "تحضره كله و نفسك تحضر كمان"
+          payload: "P"
+
+  utter_ask_question_12:
+    - text: "انت بتصف نفسك بانك شخص"
+      buttons:
+        - title: "جدي و حازم"
+          payload: "J"
+        - title: "بسيط و متسامح"
+          payload: "P"
+
+
+
+  utter_slots_names:
+  - text: عاشت الأسامي {first_name} {last_name} من {state}!
+
+  utter_submit:
+  - text: شكرا على المعطيات, جاري تحليل شخصيتك لمعرفة التخصص المناسب لك
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+forms:
+  user_details_form:
+    required_slots:
+      - first_name
+      - last_name
+      - state
+      - question_1
+      - question_2
+      - question_3
+      - question_4
+      - question_5
+      - question_6
+      - question_7
+      - question_8
+      - question_9
+      - question_10
+      - question_11
+      - question_12
+
+
+
+actions:
+  - action_calc_code
+
+slots:
+  first_name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+         - active_loop: user_details_form
+           requested_slot: first_name
+  last_name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+         - active_loop: user_details_form
+           requested_slot: last_name
+  state:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+         - active_loop: user_details_form
+           requested_slot: state
+  
+  question_1:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+         - active_loop: user_details_form
+           requested_slot: question_1
+
+  question_2:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+         - active_loop: user_details_form
+           requested_slot: question_2
+
+  question_3:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+         - active_loop: user_details_form
+           requested_slot: question_3
+
+  question_4:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+         - active_loop: user_details_form
+           requested_slot: question_4
+
+  question_5:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+         - active_loop: user_details_form
+           requested_slot: question_5
+
+  question_6:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+         - active_loop: user_details_form
+           requested_slot: question_6
+
+  question_7:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+         - active_loop: user_details_form
+           requested_slot: question_7
+
+  question_8:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+         - active_loop: user_details_form
+           requested_slot: question_8
+
+  question_9:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+         - active_loop: user_details_form
+           requested_slot: question_9
+
+  question_10:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+         - active_loop: user_details_form
+           requested_slot: question_10
+
+  question_11:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+         - active_loop: user_details_form
+           requested_slot: question_11
+
+  question_12:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+         - active_loop: user_details_form
+           requested_slot: question_12
+

@@ -1,0 +1,10 @@
+version: '3.0'
+services:
+  rasa:
+    image: rasa/rasa:3.2.5-full
+    ports:
+      - 8080:8080
+    volumes:
+      - ./:/app
+    command:
+      - run
