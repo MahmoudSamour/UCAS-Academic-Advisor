@@ -10,20 +10,28 @@
 
 
 ```cd <مسار المشروع>```
+
+
 تحقق من موقع مجلد المشروع الحالي
 
 
 ```pwd```
+
+
 قم بإعادة تسمية ملف Dockerfile - API إلى Dockerfile
 
 قم بإنشاء Docker image باستخدام الأمر التالي:
 
 
-```docker build -t rasa-api .```
+```docker build -t rasaapi .```
+
+
 قم بتشغيل Docker container باستخدام الأمر التالي:
 
 
-```docker run -it --rm -p 5005:5005 --name rasa-api rasa-api```
+```docker run -it --rm -p 5005:5005 --name rasaapi rasaapi```
+
+
 قم بإعادة تسمية ملف Dockerfile إلى Dockerfile - API
 
 في نافذة ترمينال جديدة ، انتقل إلى مجلد المشروع
@@ -31,31 +39,44 @@
 
 
 ```cd <مسار المشروع>```
+
+
 قم بإعادة تسمية ملف Dockerfile - actions إلى Dockerfile
 
 قم بإنشاء Docker image باستخدام الأمر التالي:
 
 
-```docker build -t rasa-actions .```
+```docker build -t rasaactions .```
+
+
 قم بتشغيل Docker container باستخدام الأمر التالي:
 
 
-```docker run -it -p 5055:5055 --name rasa-action-server rasa-actions```
+```docker run -it -p 5055:5055 --name rasaactions rasaactions```
+
+
 قم بإعادة تسمية ملف Dockerfile إلى Dockerfile - actions
 
 لاختبار Rasa ، استخدم الأمر التالي:
 
 
-curl -X POST "http://localhost:5005/webhooks/rest/webhook" -H "Content-Type: application/json" -d '{"message":"مرحبا"}'
+
+```curl -X POST "http://localhost:5005/webhooks/rest/webhook" -H "Content-Type: application/json" -d '{"message":"مرحبا"}'```
+
+
+
 لإيقاف Rasa ، استخدم الأمر التالي لعرض جميع Docker containers:
 
+
 ```docker ps```
+
+
 استخدم الأمر التالي لإيقاف Docker container بناءً على <container-id>:
 
 
-docker stop <container-id>
+```docker stop <container-id>```
 
-docker rm <container-id>
+```docker rm <container-id>```
 
 
 # UCAS-Academic-Advisor
