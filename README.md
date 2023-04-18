@@ -70,7 +70,10 @@
 
 ## لإيقاف Rasa ، استخدم الأمر التالي لعرض جميع Docker containers:
 
+
 ```docker ps```
+
+
 استخدم الأمر التالي لإيقاف Docker container بناءً على <container-id>:
 
 
